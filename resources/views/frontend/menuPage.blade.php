@@ -20,74 +20,13 @@
 @include('frontend.includes.adblock-detection')
 
 <body>
-<div class="page-slider">
-    <div class="swiper">
-        <div class="swiper-wrapper">
-            @forelse ($slideshows as $slideshow)
-                @if ($slideshow->type == 1)
-                    <div class="swiper-slide" data-swiper-autoplay="{{ $slideshow->duration * 1000 }}">
-                        <div class="swiper-bg"
-                             style="background-image: url({{ $slideshow->source == 1 ? asset($slideshow->file) : $slideshow->file }})">
-                        </div>
-                    </div>
-                @elseif ($slideshow->type == 2)
-                    <div class="swiper-slide swiper-video" data-swiper-autoplay="{{ $slideshow->duration * 1000 }}">
-                        <div class="swiper-video-container">
-                            <video loop muted>
-                                <source
-                                    src="{{ $slideshow->source == 1 ? asset($slideshow->file) : $slideshow->file }}">
-                            </video>
-                        </div>
-                    </div>
-                @endif
-            @empty
-                <div class="swiper-slide">
-                    <div class="swiper-bg" style="background-image: url(https://via.placeholder.com/2250x1600)">
-                    </div>
-                </div>
-            @endforelse
-        </div>
-    </div>
+
+
     <header class="header">
         @include('frontend.includes.navbar')
-        <div class="header-content text-center">
-            <div class="container">
-                <div class="header-content-img" data-aos="fade" data-aos-duration="1000" data-upload-btn>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="faa-bounce animated icon" viewBox="0 0 24 24"
-                         stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
-                         stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                        <path d="M7 18a4.6 4.4 0 0 1 0 -9a5 4.5 0 0 1 11 2h1a3.5 3.5 0 0 1 0 7h-1"></path>
-                        <polyline points="9 15 12 12 15 15"></polyline>
-                        <line x1="12" y1="12" x2="12" y2="21"></line>
-                    </svg>
-                </div>
-                <p class="h2 mt-5 mb-4 text-white" data-aos="fade-right" data-aos-duration="1000"
-                   data-aos-delay="250">
-                    {{ lang('Upload and Share Your Files', 'home page') }}
-                </p>
-                <div class="col-lg-7 mx-auto mb-5" data-aos="fade-left" data-aos-duration="1000"
-                     data-aos-delay="500">
-                    <p class="text-white lead mb-0">
-                        {{ lang('Upload your Images, documents, music, and video in a single place and access them anywhere and share them everywhere.', 'home page') }}
-                    </p>
-                </div>
-                <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="750">
-                    @if (subscription()->is_subscribed)
-                        <button class="btn btn-primary btn-lg px-5" data-dz-click>
-                            <i class="fa fa-cloud-upload-alt fa-sm me-1"></i>
-                            {{ lang('Upload', 'home page') }}
-                        </button>
-                    @else
-                        <a href="{{ route('login') }}" class="btn btn-primary btn-lg px-5">
-                            <i class="fas fa-sign-in-alt me-1"></i>
-                            {{ lang('Get Started', 'home page') }}</a>
-                    @endif
-                </div>
-            </div>
-        </div>
+
     </header>
-</div>
+
 {!! ads_home_page_top() !!}
 @if ($features->count() > 0)
     <section id="features" class="section-content">
@@ -243,9 +182,7 @@
         </div>
     </section>
 @endif
-@if (subscription()->is_subscribed)
-    @include('frontend.global.includes.uploadbox')
-@endif
+
 @push('scripts_libs')
     <script src="{{ asset('assets/vendor/libs/aos/aos.min.js') }}"></script>
     <script src="{{ asset('assets/vendor/libs/swiper/swiper-bundle.min.js') }}"></script>

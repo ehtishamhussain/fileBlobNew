@@ -23,4 +23,16 @@ class HomeController extends Controller
             'faqs' => $faqs,
         ]);
     }
+    public function featuresPage(){
+        $slideshows = Slideshow::all();
+        $features = Feature::where('lang', getLang())->get();
+        $blogArticles = BlogArticle::where('lang', getLang())->with(['blogCategory', 'admin'])->orderbyDesc('id')->limit(3)->get();
+        $faqs = Faq::where('lang', getLang())->limit(10)->get();
+        return view('frontend.menuPage', [
+            'blogArticles' => $blogArticles,
+            'features' => $features,
+            'slideshows' => $slideshows,
+            'faqs' => $faqs,
+        ]);
+        }
 }

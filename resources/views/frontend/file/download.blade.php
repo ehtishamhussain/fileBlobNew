@@ -6778,7 +6778,34 @@ Inter variable font. Usage:
         background: linear-gradient(to bottom, #ffbc56, #c92e00) !important;
         color:white !important;
     }
-
+    .mobile{
+        display:none;
+    }
+    @media (max-width: 782px) {
+        .site-logo{
+            margin-top:6rem !important;
+        }
+        .post-inner.thin{
+            margin:0px 42px;
+        }
+        .entry-content{
+            font-size:1rem !important;
+        }
+        .alignnone{
+            width:200px;
+        }
+        .mobile{
+            display:block;
+        }
+        .primary-menu a {
+            font-size: 0.7rem;
+        }
+        .filebox{
+            position:inherit !important;
+            top:inherit !important;
+            right: inherit !important;
+        }
+    }
 </style>
 
 </head>
@@ -6797,16 +6824,11 @@ Inter variable font. Usage:
             <div class="header-titles">
 
 
-                <div class="site-logo faux-heading"><a href="https://zippyshares.net/" class="custom-logo-link" rel="home" aria-current="page"><img width="306" height="86" src="https://zippyshares.net/wp-content/uploads/2023/04/zippyshares-logo.png" class="custom-logo" alt="zippyshares.com &#8211; New Free Files Hosting" decoding="async" srcset="https://zippyshares.net/wp-content/uploads/2023/04/zippyshares-logo.png 306w, https://zippyshares.net/wp-content/uploads/2023/04/zippyshares-logo-300x84.png 300w" sizes="(max-width: 306px) 100vw, 306px" /></a><span class="screen-reader-text">zippyshares.com - New Free Files Hosting</span></div>
+                <div class="site-logo faux-heading"><a href="/" class="custom-logo-link" rel="home" aria-current="page"><img width="306" height="86" src="https://zippyshares.net/wp-content/uploads/2023/04/zippyshares-logo.png" class="custom-logo" alt="zippyshares.com &#8211; New Free Files Hosting" decoding="async" srcset="https://zippyshares.net/wp-content/uploads/2023/04/zippyshares-logo.png 306w, https://zippyshares.net/wp-content/uploads/2023/04/zippyshares-logo-300x84.png 300w" sizes="(max-width: 306px) 100vw, 306px" /></a><span class="screen-reader-text">zippyshares.com - New Free Files Hosting</span></div>
 
 
             </div><!-- .header-titles -->
 
-            <button class="toggle nav-toggle mobile-nav-toggle" data-toggle-target=".menu-modal"  data-toggle-body-class="showing-menu-modal" aria-expanded="false" data-set-focus=".close-nav-toggle">
-						<span class="toggle-inner">
-							<span class="toggle-icon">
-								<svg class="svg-icon" aria-hidden="true" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" width="26" height="7" viewBox="0 0 26 7"><path fill-rule="evenodd" d="M332.5,45 C330.567003,45 329,43.4329966 329,41.5 C329,39.5670034 330.567003,38 332.5,38 C334.432997,38 336,39.5670034 336,41.5 C336,43.4329966 334.432997,45 332.5,45 Z M342,45 C340.067003,45 338.5,43.4329966 338.5,41.5 C338.5,39.5670034 340.067003,38 342,38 C343.932997,38 345.5,39.5670034 345.5,41.5 C345.5,43.4329966 343.932997,45 342,45 Z M351.5,45 C349.567003,45 348,43.4329966 348,41.5 C348,39.5670034 349.567003,38 351.5,38 C353.432997,38 355,39.5670034 355,41.5 C355,43.4329966 353.432997,45 351.5,45 Z" transform="translate(-329 -38)" /></svg>							</span>
-							<span class="toggle-text">Menu					</button><!-- .nav-toggle -->
 
         </div><!-- .header-titles-wrapper -->
 
@@ -6817,12 +6839,36 @@ Inter variable font. Usage:
 
                 <ul class="primary-menu reset-list-style">
 
-                    <li id="menu-item-86" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-63 current_page_item menu-item-86"><a href="https://zippyshares.net/" aria-current="page">Upload Files</a></li>
-                    <li id="menu-item-83" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-83"><a href="https://zippyshares.net/faq/">F.A.Q</a></li>
-                    <li id="menu-item-231" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-231"><a href="https://zippyshares.net/report-abuse/">REPORT ABUSE</a></li>
-                    <li id="menu-item-108" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-108"><a href="https://zippyshares.net/our-blog/">Our Blog</a></li>
-                    <li id="menu-item-81" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-81"><a href="https://zippyshares.net/api/">API</a></li>
-                    <li id="menu-item-228" style="margin-left: auto;" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-228"><a href="#">Select Language: 🇺🇸</a></li>
+                    <li id="menu-item-86" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-63 current_page_item menu-item-86"><a href="/" aria-current="page">Home</a></li>
+                    <li id="menu-item-83" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-83"><a href="{{route('features')}}">Features</a></li>
+                    <li id="menu-item-231" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-231"><a href="{{route('features')}}">Pricing</a></li>
+                    <li id="menu-item-108" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-108"><a href="{{route('features')}}">Blog</a></li>
+                    <li id="menu-item-81" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-81"><a href="{{route('features')}}">FAQ</a></li>
+                    <li id="menu-item-81" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-81"><a href="{{route('features')}}">Contact Us</a></li>
+
+                    <li id="menu-item-228" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-228"><a href="#">English</a></li>
+
+                </ul>
+
+            </nav><!-- .primary-menu-wrapper -->
+
+
+        </div><!-- .header-navigation-wrapper -->
+        <div class="header-navigation-wrapper mobile">
+
+
+            <nav class="" aria-label="Horizontal">
+
+                <ul class="primary-menu menu-mobile reset-list-style">
+
+                    <li id="menu-item-86" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-63 current_page_item menu-item-86"><a href="/" aria-current="page">Home</a></li>
+                    <li id="menu-item-83" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-83"><a href="{{route('features')}}">Features</a></li>
+                    <li id="menu-item-231" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-231"><a href="{{route('features')}}">Pricing</a></li>
+                    <li id="menu-item-108" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-108"><a href="{{route('features')}}">Blog</a></li>
+                    <li id="menu-item-81" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-81"><a href="{{route('features')}}">FAQ</a></li>
+                    <li id="menu-item-81" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-81"><a href="{{route('features')}}">Contact Us</a></li>
+
+                    <li id="menu-item-228" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-228"><a href="#">English</a></li>
 
                 </ul>
 
@@ -6837,47 +6883,6 @@ Inter variable font. Usage:
 </header><!-- #site-header -->
 
 
-<div class="menu-modal cover-modal header-footer-group" data-modal-target-string=".menu-modal">
-
-    <div class="menu-modal-inner modal-inner">
-
-        <div class="menu-wrapper section-inner">
-
-            <div class="menu-top">
-
-                <button class="toggle close-nav-toggle fill-children-current-color" data-toggle-target=".menu-modal" data-toggle-body-class="showing-menu-modal" data-set-focus=".menu-modal">
-                    <span class="toggle-text">Close Menu</span>
-                    <svg class="svg-icon" aria-hidden="true" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><polygon fill="" fill-rule="evenodd" points="6.852 7.649 .399 1.195 1.445 .149 7.899 6.602 14.352 .149 15.399 1.195 8.945 7.649 15.399 14.102 14.352 15.149 7.899 8.695 1.445 15.149 .399 14.102" /></svg>				</button><!-- .nav-toggle -->
-
-
-                <nav class="mobile-menu" aria-label="Mobile">
-
-                    <ul class="modal-menu reset-list-style">
-
-                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-63 current_page_item menu-item-86"><div class="ancestor-wrapper"><a href="https://zippyshares.net/" aria-current="page">Upload Files</a></div><!-- .ancestor-wrapper --></li>
-                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-83"><div class="ancestor-wrapper"><a href="https://zippyshares.net/faq/">F.A.Q</a></div><!-- .ancestor-wrapper --></li>
-                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-231"><div class="ancestor-wrapper"><a href="https://zippyshares.net/report-abuse/">REPORT ABUSE</a></div><!-- .ancestor-wrapper --></li>
-                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-108"><div class="ancestor-wrapper"><a href="https://zippyshares.net/our-blog/">Our Blog</a></div><!-- .ancestor-wrapper --></li>
-                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-81"><div class="ancestor-wrapper"><a href="https://zippyshares.net/api/">API</a></div><!-- .ancestor-wrapper --></li>
-                        <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-228"><div class="ancestor-wrapper"><a href="#">Select Language: 🇺🇸</a></div><!-- .ancestor-wrapper --></li>
-
-                    </ul>
-
-                </nav>
-
-
-            </div><!-- .menu-top -->
-
-            <div class="menu-bottom">
-
-
-            </div><!-- .menu-bottom -->
-
-        </div><!-- .menu-wrapper -->
-
-    </div><!-- .menu-modal-inner -->
-
-</div><!-- .menu-modal -->
 <main id="site-content">
 
 
@@ -6961,6 +6966,7 @@ Inter variable font. Usage:
 
 
             </div><!-- .entry-content -->
+            {!! ads_download_page_down_bottom() !!}
 
         </div><!-- .post-inner -->
 
@@ -6980,7 +6986,7 @@ Inter variable font. Usage:
 
     <div class="footer-f">
         <p style="text-align: center;">© 2006-2024 Zippyshare.com. All rights reserved. <br>Terms and
-            <strong><a href="https://zippyshares.net/terms-of-use/" target="_blank" rel="noopener">Conditions</a> | <a href="https://zippyshares.net/dmca-policy/" target="_blank" rel="noopener">DMCA Policy</a></strong></p>
+            <strong><a href="#" target="_blank" rel="noopener">Conditions</a> | <a href="#" target="_blank" rel="noopener">DMCA Policy</a></strong></p>
 
     </div>
 

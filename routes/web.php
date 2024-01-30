@@ -16,7 +16,6 @@ use Illuminate\Support\Facades\Route;
 | Admin Routes
 |--------------------------------------------------------------------------
  */
-
 Route::group(['middleware' => 'notInstalled', 'prefix' => 'admin', 'namespace' => 'Backend'], function () {
     Route::name('admin.')->namespace('Auth')->group(function () {
         Route::get('/', 'LoginController@redirectToLogin')->name('index');
@@ -260,6 +259,8 @@ Route::group(localizeOptions(), function () {
         Route::post('plan/{id}/{type}', 'SubscribeController@subscribe')->name('subscribe')->middleware('saas');
         Route::middleware('isSubscribed')->group(function () {
             Route::get('/', 'HomeController@index')->name('home');
+            Route::get('/features', 'HomeController@featuresPage')->name('features');
+
             Route::get('contact-us', 'PageController@contact')->name('contact');
             Route::post('contact-us/send', 'PageController@contactSend');
             Route::get('page/{slug}', 'PageController@pages')->name('page');
