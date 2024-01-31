@@ -6918,7 +6918,7 @@ Inter variable font. Usage:
                             <div class="filebox-desc mx-3">
                                 <p class="filebox-title mb-1">{{ $fileEntry->name }}</p>
                                 <div class="filebox-actions">
-                                    <a data-bs-toggle="modal" data-bs-target="#share" rel="tooltip" data-bs-placement="top"
+                                    <a style="text-decoration:none !important;" data-bs-toggle="modal" data-bs-target="#share" rel="tooltip" data-bs-placement="top"
                                        title="{{ lang('Share File', 'download page') }}">
                                         <i class="fas fa-share-alt"></i>
                                     </a>
@@ -6926,13 +6926,13 @@ Inter variable font. Usage:
                                         $reportFileStatus = auth()->user() && $fileEntry->user_id == userAuthInfo()->id ? false : true;
                                     @endphp
                                     @if ($reportFileStatus)
-                                        <a data-bs-toggle="modal" data-bs-target="#report" rel="tooltip"
+                                        <a style="text-decoration:none !important;"  data-bs-toggle="modal" data-bs-target="#report" rel="tooltip"
                                            data-bs-placement="top" title="{{ lang('Report File', 'download page') }}">
                                             <i class="far fa-flag"></i>
                                         </a>
                                     @endif
                                     @if (isFileSupportPreview($fileEntry->type))
-                                        <a href="{{ route('file.preview', $fileEntry->shared_id) }}" target="_blank"
+                                        <a style="text-decoration:none !important;"  href="{{ route('file.preview', $fileEntry->shared_id) }}" target="_blank"
                                            rel="tooltip" data-bs-placement="top"
                                            title="{{ lang('Preview File', 'download page') }}">
                                             <i class="far fa-eye"></i>
@@ -6976,6 +6976,58 @@ Inter variable font. Usage:
 
 
     </article><!-- .post -->
+    @php
+        $reportFileStatus = auth()->user() && $fileEntry->user_id == userAuthInfo()->id ? false : true;
+    @endphp
+    @if ($reportFileStatus)
+        <div id="report" class="modal fade" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">{{ lang('Report this file', 'download page') }}</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form action="{{ route('file.report', $fileEntry->shared_id) }}" method="POST">
+                            @csrf
+                            <div class="row g-3 mb-3">
+                                <div class="col-lg-6">
+                                    <label class="form-label">{{ lang('Name', 'download page') }} : <span
+                                            class="red">*</span></label>
+                                    <input type="name" name="name" class="form-control form-control-lg"
+                                           value="{{ userAuthInfo()->name ?? '' }}" required>
+                                </div>
+                                <div class="col-lg-6">
+                                    <label class="form-label">{{ lang('Email', 'download page') }} : <span
+                                            class="red">*</span></label>
+                                    <input type="email" name="email" class="form-control form-control-lg"
+                                           value="{{ userAuthInfo()->email ?? '' }}" required>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">{{ lang('Reason for reporting', 'download page') }} :
+                                    <span class="red">*</span></label>
+                                <select name="reason" class="form-select form-select-lg" required>
+                                    @foreach (reportReasons() as $reasonsKey => $reasonsValue)
+                                        <option value="{{ $reasonsKey }}">{{ $reasonsValue }}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">{{ lang('Details', 'download page') }} : <span
+                                        class="red">*</span></label>
+                                <textarea name="details" class="form-control" rows="7"
+                                          placeholder="{{ lang('Describe the reason why you reported the file to a maximum of 600 characters', 'download page') }}"
+                                          required></textarea>
+                            </div>
+                            {!! display_captcha() !!}
+                            <button type="submit" class="btn btn-primary">{{ lang('Send', 'download page') }}</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    @endif
 
 </main><!-- #site-content -->
 
@@ -6986,7 +7038,7 @@ Inter variable font. Usage:
 
     <div class="footer-f">
         <p style="text-align: center;">© 2006-2024 Zippyshare.com. All rights reserved. <br>Terms and
-            <strong><a href="#" target="_blank" rel="noopener">Conditions</a> | <a href="#" target="_blank" rel="noopener">DMCA Policy</a></strong></p>
+            <strong><a href="/page/terms-of-use" target="_blank" rel="noopener">Conditions</a> | <a href="/page/dmca" target="_blank" rel="noopener">DMCA Policy</a></strong></p>
 
     </div>
 

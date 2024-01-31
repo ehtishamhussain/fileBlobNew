@@ -130,7 +130,7 @@
                     <div class="uploadbox-wrapper-form mt-4">
                         <div class="mb-3">
                             <label class="form-label fw-500">{{ lang('Auto delete file', 'upload zone') }}</label>
-                            <select name="upload_auto_delete" class="upload-auto-delete form-select form-select-md">
+                            <select style="font-size:1.3rem !important;" name="upload_auto_delete" class="upload-auto-delete form-select form-select-md">
                                 @foreach (autoDeletePeriods() as $autoDeletePeriodKey => $autoDeletePeriodValue)
                                     <option value="{{ $autoDeletePeriodKey }}"
                                         data-action="{{ $autoDeletePeriodValue['days'] }}">

@@ -22,7 +22,7 @@
 <body>
 
 
-    <header class="header">
+    <header class="header" style="min-height: initial; padding-bottom: initial;">
         @include('frontend.includes.navbar')
 
     </header>

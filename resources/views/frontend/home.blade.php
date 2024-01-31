@@ -6962,7 +6962,7 @@ Inter variable font. Usage:
                                 ✔ Up to 20GB per File<br />
                                 ✔ Unlimited Disk Space<br />
                                 ✔ No Sign Up Required</p>
-                            <p>Developer? Check out our <a href="https://zippyshares.net/api/"><strong>API</strong></a></p>
+                            <p>Developer? Check out our <a href="#"><strong>API</strong></a></p>
                         </div>
                         <div class="first-part">
 {{--                            <button class="btn btn-primary btn-lg px-5" style="background-color: #f47700 !important" data-dz-click>--}}
@@ -6973,7 +6973,7 @@ Inter variable font. Usage:
                             <p><input id="privat1" type="checkbox" /></p>
                             <p class="privat" style="text-align: center;">Set as Private Upload</p>
                             <h6 class="term" style="text-align: center;">* By uploading a file You agree to the<br />
-                                <a href="https://zippyshares.net/terms-of-use/" target="_blank" rel="noopener"><strong>Terms and Conditions</strong></a></h6>
+                                <a href="/page/terms-of-use" target="_blank" rel="noopener"><strong>Terms and Conditions</strong></a></h6>
                         </div>
                     </div>
                     <p style="text-align: center;">What <strong>Zippyshare</strong> can offer you?</p>
@@ -6999,7 +6999,7 @@ Inter variable font. Usage:
 
     <div class="footer-f">
         <p style="text-align: center;">© 2006-2024 Zippyshare.com. All rights reserved. <br>Terms and
-            <strong><a href="https://zippyshares.net/terms-of-use/" target="_blank" rel="noopener">Conditions</a> | <a href="https://zippyshares.net/dmca-policy/" target="_blank" rel="noopener">DMCA Policy</a></strong></p>
+            <strong><a href="/page/terms-of-use" target="_blank" rel="noopener">Conditions</a> | <a href="/page/dmca" target="_blank" rel="noopener">DMCA Policy</a></strong></p>
 
     </div>
 
