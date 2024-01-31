@@ -271,6 +271,7 @@ Route::group(localizeOptions(), function () {
                 Route::post('article/{slug}/comment', 'BlogController@comment')->name('article.comment');
             });
             Route::get('faq', 'PageController@faq')->name('faq');
+            Route::get('pricing', 'PageController@pricing')->name('pricing');
             Route::name('file.')->namespace('File')->group(function () {
                 Route::get('{shared_id}/password', 'PasswordController@index');
                 Route::post('{shared_id}/password', 'PasswordController@unlock')->name('password');

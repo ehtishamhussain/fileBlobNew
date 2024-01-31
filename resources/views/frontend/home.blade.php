@@ -10,11 +10,12 @@
 
     <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
 
-    <!-- This site is optimized with the Yoast SEO plugin v20.8 - https://yoast.com/wordpress/plugins/seo/ -->
-    <title>Upload Files - zippyshares.com - New Free Files Hosting</title>
 
+    <title>ZippyShare - Free file hosting and file sharing</title>
 
+    <meta name="description" content="ZippyShare is a file hosting and sharing platform, providing fast and reliable file storage services file upload on - zippyshare.com.">
 
+    <meta name="keywords" content="file hosting, file sharing, cloud storage, file management, ZippyShare">
 
     <style >
 
@@ -6825,8 +6826,7 @@ Inter variable font. Usage:
 
             <div class="header-titles">
 
-
-                <div class="site-logo faux-heading"><a href="https://zippyshares.net/" class="custom-logo-link" rel="home" aria-current="page"><img width="306" height="86" src="https://zippyshares.net/wp-content/uploads/2023/04/zippyshares-logo.png" class="custom-logo" alt="zippyshares.com &#8211; New Free Files Hosting" decoding="async" srcset="https://zippyshares.net/wp-content/uploads/2023/04/zippyshares-logo.png 306w, https://zippyshares.net/wp-content/uploads/2023/04/zippyshares-logo-300x84.png 300w" sizes="(max-width: 306px) 100vw, 306px" /></a><span class="screen-reader-text">zippyshares.com - New Free Files Hosting</span></div>
+                <div class="site-logo faux-heading"><a style="max-width: 300px; max-height:150px;" href="/" class="custom-logo-link" rel="home" aria-current="page"><img width="306" height="86" src="{{asset('images/zippyshare-logo.png')}}" class="custom-logo" alt="zippyshares.com &#8211; New Free Files Hosting" decoding="async" srcset="{{asset('images/zippyshare-logo.png')}} 306w, {{asset('images/zippyshare-logo.png')}} 300w" sizes="(max-width: 306px) 100vw, 306px" /></a><span class="screen-reader-text">zippyshares.com - New Free Files Hosting</span></div>
 
 
             </div><!-- .header-titles -->
@@ -6844,10 +6844,10 @@ Inter variable font. Usage:
 
                     <li id="menu-item-86" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-63 current_page_item menu-item-86"><a href="/" aria-current="page">Home</a></li>
                     <li id="menu-item-83" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-83"><a href="{{route('features')}}">Features</a></li>
-                    <li id="menu-item-231" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-231"><a href="{{route('features')}}">Pricing</a></li>
-                    <li id="menu-item-108" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-108"><a href="{{route('features')}}">Blog</a></li>
-                    <li id="menu-item-81" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-81"><a href="{{route('features')}}">FAQ</a></li>
-                    <li id="menu-item-81" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-81"><a href="{{route('features')}}">Contact Us</a></li>
+                    <li id="menu-item-231" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-231"><a href="{{route('pricing')}}">Pricing</a></li>
+                    <li id="menu-item-108" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-108"><a href="/blog">Blog</a></li>
+                    <li id="menu-item-81" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-81"><a href="{{route('faq')}}">FAQ</a></li>
+                    <li id="menu-item-81" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-81"><a href="{{route('contact')}}">Contact Us</a></li>
 
                     <li id="menu-item-228" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-228"><a href="#">English</a></li>
 
@@ -6866,10 +6866,10 @@ Inter variable font. Usage:
 
                     <li id="menu-item-86" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-63 current_page_item menu-item-86"><a href="/" aria-current="page">Home</a></li>
                     <li id="menu-item-83" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-83"><a href="{{route('features')}}">Features</a></li>
-                    <li id="menu-item-231" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-231"><a href="{{route('features')}}">Pricing</a></li>
-                    <li id="menu-item-108" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-108"><a href="{{route('features')}}">Blog</a></li>
-                    <li id="menu-item-81" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-81"><a href="{{route('features')}}">FAQ</a></li>
-                    <li id="menu-item-81" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-81"><a href="{{route('features')}}">Contact Us</a></li>
+                    <li id="menu-item-231" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-231"><a href="{{route('pricing')}}">Pricing</a></li>
+                    <li id="menu-item-108" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-108"><a href="/blog">Blog</a></li>
+                    <li id="menu-item-81" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-81"><a href="{{route('faq')}}">FAQ</a></li>
+                    <li id="menu-item-81" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-81"><a href="{{route('contact')}}">Contact Us</a></li>
 
                     <li id="menu-item-228" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-228"><a href="#">English</a></li>
 
@@ -6949,7 +6949,7 @@ Inter variable font. Usage:
             <div class="entry-content">
 
                 <div class="first-bg">
-                    <p style="text-align: center;"><strong>Select or Drag &amp; Drop your files for upload</strong> (maximum 500 MB each):</p>
+                    <p style="text-align: center;"><strong>Select your any files for upload below</strong> (maximum 500 MB each):</p>
                     <div class="image-upload"><label for="file-input"><br />
                             <img decoding="async" data-dz-click class="alignnone wp-image-116 size-full" src="/images/desktop-upload.png" alt="" width="985" height="36" srcset="https://zippyshares.net/wp-content/uploads/2023/04/desktop-upload.png 985w, https://zippyshares.net/wp-content/uploads/2023/04/desktop-upload-300x11.png 300w, https://zippyshares.net/wp-content/uploads/2023/04/desktop-upload-768x28.png 768w" sizes="(max-width: 985px) 100vw, 985px" /><br />
                         </label><input id="file-input" type="file" /></p>
@@ -6959,10 +6959,10 @@ Inter variable font. Usage:
                         <div class="first-part">
                             <p><strong>✔ 100% Free</strong><br />
                                 ✔ No Download Limits<br />
-                                ✔ Up to 20GB per File<br />
+                                ✔ Up to 500MB per File<br />
                                 ✔ Unlimited Disk Space<br />
                                 ✔ No Sign Up Required</p>
-                            <p>Developer? Check out our <a href="#"><strong>API</strong></a></p>
+                            <p>Increase upload file size >  <a href="{{route('pricing')}}"><strong>Pricing</strong></a></p>
                         </div>
                         <div class="first-part">
 {{--                            <button class="btn btn-primary btn-lg px-5" style="background-color: #f47700 !important" data-dz-click>--}}
@@ -6998,8 +6998,8 @@ Inter variable font. Usage:
 
 
     <div class="footer-f">
-        <p style="text-align: center;">© 2006-2024 Zippyshare.com. All rights reserved. <br>Terms and
-            <strong><a href="/page/terms-of-use" target="_blank" rel="noopener">Conditions</a> | <a href="/page/dmca" target="_blank" rel="noopener">DMCA Policy</a></strong></p>
+        <p style="text-align: center;">© 2023 Zippyshare. All rights reserved. <br>Terms and
+            <strong><a href="/page/terms-of-use" target="_blank" rel="noopener">Conditions</a> | <a href="/page/dmca" target="_blank" rel="noopener">DMCA Policy</a> | <a href="page/privacy-policy" target="_blank" rel="noopener">Privacy Policy</a> | <a href="/page/about-us" target="_blank" rel="noopener">About Us</a></strong> </p>
 
     </div>
 

@@ -28,7 +28,7 @@ class HomeController extends Controller
         $features = Feature::where('lang', getLang())->get();
         $blogArticles = BlogArticle::where('lang', getLang())->with(['blogCategory', 'admin'])->orderbyDesc('id')->limit(3)->get();
         $faqs = Faq::where('lang', getLang())->limit(10)->get();
-        return view('frontend.menuPage', [
+        return view('frontend.features', [
             'blogArticles' => $blogArticles,
             'features' => $features,
             'slideshows' => $slideshows,
